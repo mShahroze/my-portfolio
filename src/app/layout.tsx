@@ -1,10 +1,11 @@
 import '@/styles/globals.css';
 import { Inter } from 'next/font/google';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { Providers } from '@/components/Providers';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import AIAssistant from '@/components/AIAssistant';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    siteId: '@muhammadsbilal',
-    site: '@yourwebsitehandle', // Replace with your website's Twitter handle
+    siteId: '@mShahroze',
+    site: '@Resinote',
     card: 'summary_large_image',
   },
 };
@@ -52,12 +53,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="flex flex-col min-h-screen">
+    <html
+      lang="en"
+      className={inter.className}
+      suppressHydrationWarning
+    >
+      <body
+        className="flex flex-col min-h-screen"
+        suppressHydrationWarning
+      >
         <Providers>
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />
+          <AIAssistant />
         </Providers>
         <Analytics />
       </body>

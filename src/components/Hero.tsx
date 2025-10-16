@@ -1,27 +1,13 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 },
-};
 
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 text-center z-10">
-        <motion.div
-          className="mb-8"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-        >
+        <div className="mb-8">
           <div
             className="overflow-hidden rounded-full mx-auto shadow-xl border-4 border-white dark:border-gray-700"
             style={{ width: '400px', height: '400px' }}
@@ -33,26 +19,14 @@ const Hero: React.FC = () => {
               height={500}
             />
           </div>
-        </motion.div>
-        <motion.h1
-          className="text-5xl font-extrabold mb-4 text-gray-800 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400"
-          {...fadeInUp}
-          transition={{ ...fadeInUp.transition, delay: 0.2 }}
-        >
+        </div>
+        <h1 className="text-5xl font-extrabold mb-4 text-gray-800 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">
           Muhammad S. Bilal
-        </motion.h1>
-        <motion.p
-          className="text-2xl mb-8 text-gray-600 dark:text-gray-300"
-          {...fadeInUp}
-          transition={{ ...fadeInUp.transition, delay: 0.4 }}
-        >
+        </h1>
+        <p className="text-2xl mb-8 text-gray-600 dark:text-gray-300">
           Software Engineer & Web Developer
-        </motion.p>
-        <motion.div
-          className="flex justify-center space-x-6"
-          {...fadeInUp}
-          transition={{ ...fadeInUp.transition, delay: 0.6 }}
-        >
+        </p>
+        <div className="flex justify-center space-x-6">
           {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
             <a
               key={index}
@@ -64,16 +38,12 @@ const Hero: React.FC = () => {
               <Icon className="w-8 h-8" />
             </a>
           ))}
-        </motion.div>
+        </div>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
+        <div className="animate-bounce">
           <FaTwitter className="w-8 h-8 text-blue-500 dark:text-blue-400" />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

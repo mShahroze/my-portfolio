@@ -12,6 +12,7 @@ export function Providers({
       attribute="class"
       defaultTheme="system"
       enableSystem
+      disableTransitionOnChange
     >
       {children}
     </ThemeProvider>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 const projects = [
   {
@@ -24,16 +25,17 @@ const projects = [
   },
 ];
 
-export default function PortfolioDetails({
+type Params = { id: string };
+
+export default async function PortfolioDetails({
   params,
 }: {
-  params: { id: string };
+  params: Promise<Params>;
 }) {
-  const project = projects.find((p) => p.id === params.id);
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
 
-  if (!project) {
-    return <div>Project not found</div>;
-  }
+  if (!project) return notFound();
 
   return (
     <div className="container mx-auto px-4 py-20">
@@ -76,4 +78,8 @@ export default function PortfolioDetails({
       </div>
     </div>
   );
+}
+
+export function generateStaticParams() {
+  return projects.map((p) => ({ id: p.id }));
 }

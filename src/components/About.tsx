@@ -14,18 +14,18 @@ interface Skill {
 const skills: Skill[] = [
   {
     icon: FaCode,
-    title: 'Front-end Development',
-    description: 'HTML5, CSS3, JavaScript, React',
+    title: 'Frontend Engineering',
+    description: 'React, TypeScript, Next.js, Tailwind CSS',
   },
   {
     icon: FaServer,
-    title: 'Back-end Development',
-    description: 'Node.js, PHP, MySQL',
+    title: 'Backend & Data',
+    description: 'Node.js, PostgreSQL, REST APIs, Express',
   },
   {
     icon: FaProjectDiagram,
-    title: 'Project Management',
-    description: 'Agile, Scrum, SDLC',
+    title: 'AI/ML (Learning)',
+    description: 'OpenAI API, LangChain.js, TensorFlow.js, RAG',
   },
 ];
 
@@ -66,25 +66,16 @@ const About: React.FC = () => {
           >
             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300">
               <p>
-                I&apos;m a passionate Software Engineer and Web
-                Developer with experience in full Software Development
-                Life Cycle, Administration, and Project Management. I
-                thrive in fast-paced, team-based environments and
-                enjoy adapting to new technologies and building
-                personal projects.
+                My journey from biomedical engineering to software development has given me a unique perspective on building data-driven systems. I graduated with a BEng in Biomedical Engineering, where I worked on ECG signal processing and medical imaging—laying the foundation for my analytical approach to problem-solving.
               </p>
               <p>
-                My strongest skills include front-end development with
-                HTML5, CSS3, JavaScript, and React, as well as
-                back-end development using Node.js, PHP, and MySQL.
-                I&apos;m also proficient in using popular web
-                techniques like AJAX and JSON.
+                I spent over a year at the NHS as a Software Data Analyst, building healthcare solutions that supported 500,000+ patients annually. I designed patient workflow systems, maintained databases for 50,000+ records, and created automated reporting tools that improved clinical efficiency by 60%. Working directly with healthcare professionals showed me how impactful well-designed data systems can be.
               </p>
               <p>
-                I&apos;m constantly pushing myself out of my comfort
-                zone, exploring new territories in the tech world, and
-                looking forward to working with like-minded
-                professionals to create innovative solutions.
+                For the past three years at PrettyLittleThing, I&apos;ve led frontend engineering initiatives—migrating design systems that improved web performance by 20%, architecting scalable TypeScript interfaces that reduced API bugs by 40%, and mentoring junior developers to improve code quality by 30%. I thrive on solving complex problems in fast-paced, team-driven environments.
+              </p>
+              <p>
+                Now, I&apos;m returning to my roots in data and analytics. I&apos;m actively learning AI/ML fundamentals—working with LLMs, building RAG applications, and exploring TensorFlow.js—while preparing for an MSc in Data Science starting September 2026. My goal is to work at the intersection of software engineering and intelligent systems, particularly in healthcare and high-impact domains.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">

@@ -24,20 +24,40 @@ const Hero: React.FC = () => {
           Muhammad S. Bilal
         </h1>
         <p className="text-2xl mb-8 text-gray-600 dark:text-gray-300">
-          Software Engineer & Web Developer
+          Software Engineer | AI/ML Enthusiast | Biomedical Engineering Background
+        </p>
+        <p className="text-lg mb-8 text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+          Building intelligent systems at the intersection of healthcare and technology.
+          Preparing for MSc Data Science (Sept 2026) while exploring AI/LLM integration.
         </p>
         <div className="flex justify-center space-x-6">
-          {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
-            <a
-              key={index}
-              href="#"
-              className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon className="w-8 h-8" />
-            </a>
-          ))}
+          <a
+            href="https://github.com/mShahroze"
+            className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+          >
+            <FaGithub className="w-8 h-8" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/msbilal"
+            className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+          >
+            <FaLinkedin className="w-8 h-8" />
+          </a>
+          <a
+            href="https://twitter.com/mShahroze"
+            className="text-gray-600 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400 transition-colors duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter Profile"
+          >
+            <FaTwitter className="w-8 h-8" />
+          </a>
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
